@@ -34,7 +34,9 @@ function onSearchImages(e) {
     } else {
       Notiflix.Notify.success('Hooray! We found totalHits images.');
       renderImage(data);
+      lightbox.refresh();
       loadMoreBtnEl.style.visibility = 'visible';
+      //
     }
   });
 }
@@ -43,11 +45,14 @@ function onLoadMore() {
   newfetchImages.incrementPage();
   newfetchImages.fetchImages().then(data => {
     renderImage(data);
+    lightbox.refresh();
     if (data.hits.length < 40) {
       Notiflix.Report.warning("We're sorry, but you've reached the end of search results.");
       loadMoreBtnEl.style.visibility = 'hidden';
     }
   });
+
+  //   lightbox.refresh();
 }
 
 function renderImage(images) {

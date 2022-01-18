@@ -13,9 +13,7 @@ export default class NewfetchImages {
       const response = await axios.get(
         `${baseUrl}?key=${KEY}&q=${this.inputName}&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=40`,
       );
-      const images = await response.data;
-
-      return images;
+      return await response.data;
     } catch (error) {
       console.log(error.message);
     }
