@@ -31,6 +31,7 @@ async function onSearchImages(e) {
     Notiflix.Report.failure(
       'Sorry, there are no images matching your search query. Please try again.',
     );
+    loadMoreBtnEl.style.visibility = 'hidden';
   } else {
     Notiflix.Notify.success('Hooray! We found totalHits images.');
     renderImage(data);
