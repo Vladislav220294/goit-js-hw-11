@@ -17,7 +17,7 @@ loadMoreBtnEl.style.visibility = 'hidden';
 
 async function onSearchImages(e) {
   e.preventDefault();
-
+  loadMoreBtnEl.style.visibility = 'hidden';
   galleryEl.innerHTML = '';
   newfetchImages.query = inputEl.value.trim();
 
