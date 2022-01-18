@@ -2,7 +2,7 @@ import './sass/main.scss';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
-import NewFetchImages from './fetchImages';
+import NewFetchImages from './js/fetchimages';
 
 const formEl = document.querySelector('.search-form');
 const galleryEl = document.querySelector('.gallery');
